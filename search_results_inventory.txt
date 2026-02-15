@@ -1,0 +1,30 @@
+# Search Results Inventory - From this conversation thread
+# Format: Anime Title | AniList ID | AniList URL
+
+# Search 1: "Vivy Fluorite Eye's Song myanimelist anilist score"
+Vivy -Fluorite Eye's Song- | 136256 | https://anilist.co/anime/136256/Vivy-Fluorite-Eyes-Song
+
+# Search 2: "Mob Psycho 100 II myanimelist anilist"
+Mob Psycho 100 II | 101338 | https://anilist.co/anime/101338
+
+# Search 3: "Ranking of Kings myanimelist anilist"
+Ranking of Kings | 113717 | https://anilist.co/anime/113717
+
+# Search 4: "Darker than Black myanimelist anilist"
+Darker than Black | 2025 | https://anilist.co/anime/2025
+
+# Search 5: "Inuyashiki myanimelist anilist"
+INUYASHIKI LAST HERO | 97922 | https://anilist.co/anime/97922
+
+# Search 6: "Talentless Nana myanimelist anilist"
+Talentless Nana | 117343 | https://anilist.co/anime/117343
+
+# Search 7: "Buddy Daddies myanimelist anilist"
+Buddy Daddies | 155907 | https://anilist.co/anime/155907
+
+# Search 8: "K Project anime 2011 anilist"
+K | 14467 | https://anilist.co/anime/14467/K
+
+# NOTE: I incorrectly applied K's URL (14467) to row 178 
+# Row 178 is "The Familiar of Zero: Rondo of Princesses" - this needs to be removed
+# K should be on row 26 (based on CSV reading)
