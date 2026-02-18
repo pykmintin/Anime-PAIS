@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "generated": "2026-02-03T19:59:38.7681998+11:00",
+  "source": "anime-offline-database-minified.json",
+  "total_entries": 40515,
+  "chunk_count": 10,
+  "wrapper_key": "data",
+  "reconstruction": "Fetch all chunks via github_raw_url, concatenate the arrays in index order",
+  "chunks": [
+    {
+      "index": 0,
+      "filename": "chunk-00.json",
+      "entry_start": 0,
+      "entry_end": 4051.0,
+      "count": 4052.0,
+      "bytes": 5668853,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-00.json"
+    },
+    {
+      "index": 1,
+      "filename": "chunk-01.json",
+      "entry_start": 4052.0,
+      "entry_end": 8103.0,
+      "count": 4052.0,
+      "bytes": 7012634,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-01.json"
+    },
+    {
+      "index": 2,
+      "filename": "chunk-02.json",
+      "entry_start": 8104.0,
+      "entry_end": 12155.0,
+      "count": 4052.0,
+      "bytes": 6129029,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-02.json"
+    },
+    {
+      "index": 3,
+      "filename": "chunk-03.json",
+      "entry_start": 12156.0,
+      "entry_end": 16207.0,
+      "count": 4052.0,
+      "bytes": 5614334,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-03.json"
+    },
+    {
+      "index": 4,
+      "filename": "chunk-04.json",
+      "entry_start": 16208.0,
+      "entry_end": 20259.0,
+      "count": 4052.0,
+      "bytes": 6870563,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-04.json"
+    },
+    {
+      "index": 5,
+      "filename": "chunk-05.json",
+      "entry_start": 20260.0,
+      "entry_end": 24310.0,
+      "count": 4051.0,
+      "bytes": 6127272,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-05.json"
+    },
+    {
+      "index": 6,
+      "filename": "chunk-06.json",
+      "entry_start": 24311.0,
+      "entry_end": 28361.0,
+      "count": 4051.0,
+      "bytes": 6375667,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-06.json"
+    },
+    {
+      "index": 7,
+      "filename": "chunk-07.json",
+      "entry_start": 28362.0,
+      "entry_end": 32412.0,
+      "count": 4051.0,
+      "bytes": 6194327,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-07.json"
+    },
+    {
+      "index": 8,
+      "filename": "chunk-08.json",
+      "entry_start": 32413.0,
+      "entry_end": 36463.0,
+      "count": 4051.0,
+      "bytes": 5835821,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-08.json"
+    },
+    {
+      "index": 9,
+      "filename": "chunk-09.json",
+      "entry_start": 36464.0,
+      "entry_end": 40514.0,
+      "count": 4051.0,
+      "bytes": 5177627,
+      "github_raw_url": "https://raw.githubusercontent.com/pykmintin/Anime-PAIS/main/chunks/chunk-09.json"
+    }
+  ]
+}
