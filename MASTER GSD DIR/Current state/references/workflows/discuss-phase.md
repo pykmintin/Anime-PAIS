@@ -60,7 +60,7 @@ Structure:
 - Idea 1: Why deferred
 - Idea 2: Why deferred
 
-## Claude's Discretion
+## Kimi's Discretion
 - Areas where reasonable choices are fine
 
 ## References
@@ -75,9 +75,9 @@ The CONTEXT.md feeds directly into:
 1. **Researcher reads it** — Knows what patterns to investigate
 2. **Planner reads it** — Knows what decisions are locked
 
-**Skip this step** → Get reasonable defaults
+**Skip this step** → Get reasonable defaults  
 **Use this step** → Get the user's actual vision
 
 ## After This Workflow
 
-User should run `/gsd:plan-phase X` or say "plan phase X" to continue.
+User should run `/gsd plan-phase X` or say "plan phase X" to continue.

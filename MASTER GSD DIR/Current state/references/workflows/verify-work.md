@@ -80,7 +80,7 @@ For each issue:
 - User moves to next phase: "plan phase X+1"
 
 **If issues found:**
-- Run `/gsd:execute-phase X` again with fix plans
+- Run `/gsd execute-phase X` again with fix plans
 - Or say "execute phase X fixes"
 
 ## Philosophy

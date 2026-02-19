@@ -1,0 +1,229 @@
+# GSD (Get Shit Done) Skill - Configuration Manifest
+# Filetype: GSD Configuration Manifest (.fg)
+# Purpose: Master documentation for GSD skill structure, mechanics, and versioning
+# Last Updated: 2026-02-19
+# Version: 1.0.0
+
+================================================================================
+DIRECTORY STRUCTURE
+================================================================================
+
+MASTER GSD DIR/
+├── cfg.fg                          # This manifest file
+├── Current state/                   # ACTIVE: Mirror of system skill
+│   ├── SKILL.md                     # Main skill entry point
+│   └── references/
+│       ├── agents/                  # Subagent role definitions
+│       │   ├── executor.md          # Task execution agent
+│       │   ├── planner.md           # Plan creation agent
+│       │   ├── researcher.md        # Research investigation agent
+│       │   └── verifier.md          # Verification agent
+│       ├── templates/               # Document templates
+│       │   ├── PROJECT.md           # Project vision template
+│       │   ├── REQUIREMENTS.md      # Requirements template
+│       │   ├── ROADMAP.md           # Phase roadmap template
+│       │   └── STATE.md             # Project state template
+│       └── workflows/               # Workflow definitions
+│           ├── new-project.md       # Initialize new project
+│           ├── discuss-phase.md     # Capture implementation decisions
+│           ├── plan-phase.md        # Research and create plans
+│           ├── execute-phase.md     # Execute plans in waves
+│           └── verify-work.md       # User acceptance testing
+│
+└── original gsd/                    # ARCHIVE: Pristine source
+    └── [same structure as Current state]
+
+================================================================================
+SYSTEM PATHS
+================================================================================
+
+ACTIVE SKILL (System Level):
+  C:\Users\JoshMain\.config\agents\skills\gsd\
+  → Loaded automatically by Kimi CLI on `/gsd` trigger
+
+MASTER ARCHIVE (Project Level):
+  C:\Users\JoshMain\Documents\Working-DIR\Anime\Anime-PAIS\MASTER GSD DIR\
+  → This directory - version control and customization
+
+================================================================================
+GSD MECHANICS
+================================================================================
+
+## Command Interface
+
+Trigger: `/gsd` (activates GSD mode, enables `:` commands)
+
+| Command          | Arguments | Purpose                          |
+|------------------|-----------|----------------------------------|
+| `:new-project`   | none      | Initialize new project           |
+| `:discuss-phase` | `<n>`     | Capture implementation decisions |
+| `:plan-phase`    | `<n>`     | Research and create plans        |
+| `:execute-phase` | `<n>`     | Execute all plans in waves       |
+| `:verify-work`   | `<n>`     | Manual user acceptance testing   |
+| `:status`        | none      | Check current position           |
+
+## Workflow Pipeline
+
+```
+:new-project
+     ↓
+:discuss-phase 1 ──→ phase-1-CONTEXT.md (locked decisions)
+     ↓
+:plan-phase 1 ─────→ phase-1-RESEARCH.md
+                     phase-1-{N}-PLAN.md files
+     ↓
+:execute-phase 1 ──→ phase-1-{N}-SUMMARY.md
+     ↓
+:verify-work 1 ────→ phase-1-UAT.md
+     ↓
+(repeat for phase 2, 3, ...)
+```
+
+## Core Principles
+
+1. **Plans are prompts** - PLAN.md IS the prompt, not a document that becomes one
+2. **Fresh context per task** - Each plan runs in a new session via Task tool
+3. **Atomic commits** - One commit per task (ask user before git mutations)
+4. **Ship fast** - Plan → Execute → Ship → Learn → Repeat
+5. **No enterprise theater** - No sprints, story points, or ceremonies
+
+## Agent Roles
+
+### Planner (references/agents/planner.md)
+- Creates executable phase plans with 2-3 tasks each
+- Builds dependency graphs and assigns execution waves
+- Uses goal-backward methodology
+- Honors locked decisions from CONTEXT.md
+
+### Executor (references/agents/executor.md)
+- Implements tasks from PLAN.md files
+- Verifies each task before atomic commit
+- Creates SUMMARY.md after execution
+- Handles failures and escalates blockers
+
+### Researcher (references/agents/researcher.md)
+- Investigates stacks, patterns, pitfalls
+- Appends findings to RESEARCH.md
+- Guided by CONTEXT.md decisions
+- Uses web search for current info
+
+### Verifier (references/agents/verifier.md)
+- Checks implementation against plan
+- Creates VERIFICATION.md with gap analysis
+- Creates fix plans if issues found
+- Validates requirements satisfaction
+
+## Execution Waves
+
+```
+WAVE 1 (parallel)       WAVE 2 (parallel)       WAVE 3
+┌─────────┐ ┌─────────┐    ┌─────────┐ ┌─────────┐    ┌─────────┐
+│ Plan 01 │ │ Plan 02 │ →  │ Plan 03 │ │ Plan 04 │ →  │ Plan 05 │
+│ (no deps│ │ (no deps│    │(needs 01│ │(needs 02│    │(needs 03│
+│ )       │ │ )       │    │ )       │ │ )       │    │ +04)    │
+└─────────┘ └─────────┘    └─────────┘ └─────────┘    └─────────┘
+```
+
+================================================================================
+VERSIONING WORKFLOW
+================================================================================
+
+When updating GSD configuration:
+
+1. **ARCHIVE** current "Current state":
+   ```
+   Current state/ → state-YYYYMMDD-HHMMSS/
+   ```
+
+2. **CREATE** new empty "Current state":
+   ```
+   mkdir "Current state"
+   ```
+
+3. **POPULATE** from system skill or modifications:
+   ```
+   cp -r ~/.config/agents/skills/gsd/* "Current state/"
+   ```
+
+4. **UPDATE** this cfg.fg:
+   - Document changes
+   - Update timestamp
+   - Log version history
+
+================================================================================
+FILE PURPOSES
+================================================================================
+
+## SKILL.md
+Main entry point. Defines:
+- Command syntax (`:new-project`, `:plan-phase`, etc.)
+- Workflow overview
+- Agent spawning instructions
+- File structure reference
+
+## Workflows/ (5 files)
+- **new-project.md**: Questioning → Research → Requirements → Roadmap
+- **discuss-phase.md**: Capture implementation decisions in CONTEXT.md
+- **plan-phase.md**: Research + create executable PLAN.md files
+- **execute-phase.md**: Execute plans in parallel waves with atomic commits
+- **verify-work.md**: Manual user acceptance testing
+
+## Agents/ (4 files)
+- **planner.md**: Creates executable plans with dependency analysis
+- **executor.md**: Implements tasks, verifies, commits atomically
+- **researcher.md**: Investigates domains, stacks, patterns
+- **verifier.md**: Checks implementation against goals
+
+## Templates/ (4 files)
+- **PROJECT.md**: Project vision and context template
+- **REQUIREMENTS.md**: v1/v2 requirements with traceability
+- **ROADMAP.md**: Phase structure and progress tracking
+- **STATE.md**: Project memory, decisions, blockers
+
+================================================================================
+PROJECT FILE OUTPUTS (Created during :new-project and phases)
+================================================================================
+
+.planning/                          # Created by :new-project
+├── PROJECT.md                      # Project vision
+├── REQUIREMENTS.md                 # Scoped requirements
+├── ROADMAP.md                      # Phase structure
+├── STATE.md                        # Project memory
+├── config.json                     # Workflow preferences
+├── phase-{n}-CONTEXT.md            # Implementation decisions
+├── phase-{n}-RESEARCH.md           # Domain research findings
+├── phase-{n}-{N}-PLAN.md           # Executable task plans
+├── phase-{n}-{N}-SUMMARY.md        # Execution results
+└── phase-{n}-UAT.md                # User acceptance test results
+
+================================================================================
+KIMI CLI INTEGRATION
+================================================================================
+
+## Skill Discovery
+- Location: `C:\Users\JoshMain\.config\agents\skills\`
+- File: `SKILL.md` in skill directory
+- Loaded on: CLI startup or `/gsd` trigger
+
+## Subagent Spawning
+Uses Task tool for parallel execution:
+```
+Spawn Task subagent:
+  - subagent_name: coder
+  - prompt: "Read references/agents/{role}.md, then {task}"
+```
+
+## Git Handling
+- **Ask user before commits** (unlike Claude's automatic commits)
+- Atomic commits: `type(phase-task): description`
+- Example: `feat(01-02): add email confirmation flow`
+
+================================================================================
+VERSION HISTORY
+================================================================================
+
+| Version | Date       | Change                              |
+|---------|------------|-------------------------------------|
+| 1.0.0   | 2026-02-19 | Initial mapping from system skill   |
+
+================================================================================

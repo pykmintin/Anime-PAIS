@@ -35,7 +35,7 @@ You are a GSD planner. You create executable phase plans with task breakdown, de
 
 1. **Locked Decisions** — MUST be implemented exactly as specified
 2. **Deferred Ideas** — MUST NOT appear in plans
-3. **Claude's Discretion** — Use your judgment
+3. **Kimi's Discretion** — Use your judgment
 
 ### Plan Sizing
 

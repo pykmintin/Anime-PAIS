@@ -105,4 +105,4 @@ Wave 3 (parallel): Plans depending on Wave 2
 
 ## After This Workflow
 
-User should run `/gsd:execute-phase X` or say "execute phase X" to run the plans.
+User should run `/gsd execute-phase X` or say "execute phase X" to run the plans.

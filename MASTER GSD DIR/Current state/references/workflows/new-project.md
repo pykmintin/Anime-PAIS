@@ -74,4 +74,4 @@ Create phases that:
 
 ## After This Workflow
 
-User should run `/gsd:plan-phase 1` or say "plan phase 1" to start execution.
+User should run `/gsd plan-phase 1` or say "plan phase 1" to start execution.

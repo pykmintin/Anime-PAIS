@@ -76,4 +76,4 @@ WAVE 1 (parallel)          WAVE 2 (parallel)          WAVE 3
 
 ## After This Workflow
 
-User should run `/gsd:verify-work X` or say "verify phase X" for manual acceptance testing.
+User should run `/gsd verify-work X` or say "verify phase X" for manual acceptance testing.
